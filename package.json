@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@faker-js/faker": "^9.2.0",
+    "cypress": "^13.16.0",
+    "faker-schema": "^2.0.0",
+    "mockaroo": "^1.0.0"
+  }
+}
