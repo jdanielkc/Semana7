@@ -40,8 +40,6 @@ describe('Tester de funcionalidad Tags', () => {
             // Then: El nuevo tag aparece en la lista de tags
             cy.get('a[data-test-nav="tags"]').click()
             cy.contains('h3', tagsData.words).should('exist')
-
-            cy.screenshot(`${ghostVersion}/nuevo-tag`)
         })
     })
 
@@ -68,17 +66,14 @@ describe('Tester de funcionalidad Tags', () => {
         cy.get('ol.tags-list > li.gh-tags-list-item').then(($lis) => {
             const filasDespues = $lis.length;
             cy.wrap(filasDespues).as('filasDespues');
-        }).catch(() => {
-            cy.wrap(0).as('filasDespues');
-        });
-
+        })
         cy.get('@filasAntes').then((filasAntes) => {
             cy.get('@filasDespues').then((filasDespues) => {
                 expect(filasDespues).to.equal(filasAntes - 1)
             })
         })
 
-        cy.screenshot(`${ghostVersion}/eliminar-tag`)
+        
     })
 
     it('E0024 Editando un tag', () => {
@@ -105,7 +100,7 @@ describe('Tester de funcionalidad Tags', () => {
 
             // Then: El tag editado aparece en la lista de tags
             cy.contains('h3', tagsData.words).should('exist')
-            cy.screenshot(`${ghostVersion}/editar-tag`)
+            
         })
     })
 
@@ -132,7 +127,7 @@ describe('Tester de funcionalidad Tags', () => {
             //verificar mensaje error
             cy.contains('p', "Description cannot be longer than 500 characters.").should('exist')
 
-            cy.screenshot(`${ghostVersion}/nuevo-tag-descripcion-invalido`)
+            
         })
     })
 

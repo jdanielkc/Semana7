@@ -13,7 +13,7 @@ describe('Tester de funcionalidad tiers de config', () => {
         })
     })
 
-    it('E0004 Modificando tier free', () => {
+    it('E0029 Modificando tier free', () => {
         // Given: El usuario está autenticado y en la página de configuración de tiers
         cy.get('a[data-test-nav="settings"]').click()
         cy.wait(1500)
@@ -44,7 +44,7 @@ describe('Tester de funcionalidad tiers de config', () => {
         cy.get('div[class*="text-[1.65rem]"][class*="font-bold"]').should('contain', tierName)
         cy.get('div[class*="line-clamp-2"][class*="text-[1.4rem]"][class*="font-medium"]').should('contain', tierDescription)
 
-        cy.screenshot(`${ghostVersion}/modificando-tier-free`)
+        
     })
 
     afterEach(() => {

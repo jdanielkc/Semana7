@@ -13,7 +13,7 @@ describe('Tester de funcionalidad Member', () => {
         })
     })
 
-    it('E0007 Añadiendo usuario administrativo como miembro', () => {
+    it('E0057 Añadiendo usuario administrativo como miembro', () => {
         // Given: El usuario está autenticado y en la página de miembros
         cy.get('a[data-test-nav="members"]').click()
         cy.wait(1500)
@@ -29,10 +29,10 @@ describe('Tester de funcionalidad Member', () => {
         })
         cy.get('button[data-test-button="close-notification"]').click()
         cy.wait(500)
-        cy.screenshot(`${ghostVersion}/agregar-usuario-administrativo`)
+        
     })
 
-    it('E0008 Creando un nuevo miembro', () => {
+    it('E0058 Creando un nuevo miembro', () => {
         // Given: El usuario está autenticado y en la página de creación de miembros
         cy.get('a[data-test-nav="members"]').click()
         cy.wait(1500)
@@ -55,11 +55,11 @@ describe('Tester de funcionalidad Member', () => {
 
             // Then: Verificar creación
             cy.contains('h3', member.fullName).should('exist')
-            cy.screenshot(`${ghostVersion}/nuevo-miembro`)
+            
         })
     })
 
-    it('E0009 Creando un nuevo miembro con email no valido', () => {
+    it('E0059 Creando un nuevo miembro con email no valido', () => {
         // Given: El usuario está autenticado y en la página de creación de miembros
         cy.get('a[data-test-nav="members"]').click()
         cy.wait(1500)
@@ -80,11 +80,11 @@ describe('Tester de funcionalidad Member', () => {
 
             // Then: Verificar mensaje de error
             cy.contains('p', "Invalid Email.").should('exist')
-            cy.screenshot(`${ghostVersion}/nuevo-miembro-email-invalido`)
+            
         })
     })
 
-    it('E0010 Creando un nuevo miembro con campo nota mayor a 500 caracteres', () => {
+    it('E0060 Creando un nuevo miembro con campo nota mayor a 500 caracteres', () => {
         // Given: El usuario está autenticado y en la página de creación de miembros
         cy.get('a[data-test-nav="members"]').click()
         cy.wait(1500)
@@ -105,11 +105,11 @@ describe('Tester de funcionalidad Member', () => {
 
             // Then: Verificar mensaje de error
             cy.contains('p', "Note is too long.").should('exist')
-            cy.screenshot(`${ghostVersion}/nuevo-miembro-nota-invalido`)
+            
         })
     })
 
-    it('E0011 Eliminando un miembro', () => {
+    it('E0061 Eliminando un miembro', () => {
         // Given: El usuario está autenticado y en la página de listado de miembros
         cy.get('a[data-test-nav="members"]').click()
         cy.url().should('include', '/members')
@@ -141,10 +141,10 @@ describe('Tester de funcionalidad Member', () => {
             })
         })
 
-        cy.screenshot(`${ghostVersion}/eliminar-miembro`)
+        
     })
 
-    it('E0012 Eliminando miembro administrador', () => {
+    it('E0062 Eliminando miembro administrador', () => {
         // Given: El usuario está autenticado y en la página de listado de miembros
         cy.get('a[data-test-nav="members"]').click()
         cy.wait(1500)
@@ -162,6 +162,6 @@ describe('Tester de funcionalidad Member', () => {
         // Then: Verificar que el botón "add-yourself" existe
         cy.get('button[data-test-button="add-yourself"]').should('exist')
         cy.get('a[data-test-nav="members"]').click()
-        cy.screenshot(`${ghostVersion}/eliminar-miembro-administrador`)
+        
     })
 })

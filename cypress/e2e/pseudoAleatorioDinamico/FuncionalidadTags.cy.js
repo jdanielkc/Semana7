@@ -17,7 +17,7 @@ describe('Tester de funcionalidad Tags', () => {
         })
     })
 
-    it('E0022 Creando un nuevo Tag', () => {
+    it('E0072 Creando un nuevo Tag', () => {
         // Given: El usuario está autenticado y en la página de creación de tags
         cy.get('a[data-test-nav="tags"]').click()
         cy.wait(1000)
@@ -40,12 +40,10 @@ describe('Tester de funcionalidad Tags', () => {
             // Then: El nuevo tag aparece en la lista de tags
             cy.get('a[data-test-nav="tags"]').click()
             cy.contains('h3', tag.tagName).should('exist')
-
-            cy.screenshot(`${ghostVersion}/nuevo-tag`)
         })
     })
 
-    it('E0023 Eliminando un tag', () => {
+    it('E0073 Eliminando un tag', () => {
         // Given: El usuario está autenticado y en la página de listado de tags
         cy.get('a[data-test-nav="tags"]').click()
         cy.wait(1000)
@@ -76,10 +74,10 @@ describe('Tester de funcionalidad Tags', () => {
             })
         })
 
-        cy.screenshot(`${ghostVersion}/eliminar-tag`)
+        
     })
 
-    it('E0024 Editando un tag', () => {
+    it('E0074 Editando un tag', () => {
         // Given: El usuario está autenticado y en la página de listado de tags
         cy.get('a[data-test-nav="tags"]').click()
         cy.wait(1000)
@@ -102,11 +100,11 @@ describe('Tester de funcionalidad Tags', () => {
 
             // Then: El tag editado aparece en la lista de tags
             cy.contains('h3', tag.tagName).should('exist')
-            cy.screenshot(`${ghostVersion}/editar-tag`)
+            
         })
     })
 
-    it('E0025 Creando un tag con una descripcion mayor a 500 caracteres', () => {
+    it('E0075 Creando un tag con una descripcion mayor a 500 caracteres', () => {
         // Given: El usuario está autenticado y en la página de creación de tags
         cy.get('a[data-test-nav="tags"]').click()
         cy.wait(1000)
@@ -129,7 +127,7 @@ describe('Tester de funcionalidad Tags', () => {
             // Then: Verificar mensaje de error
             cy.contains('p', "Description cannot be longer than 500 characters.").should('exist')
 
-            cy.screenshot(`${ghostVersion}/nuevo-tag-descripcion-invalido`)
+            
         })
     })
 })

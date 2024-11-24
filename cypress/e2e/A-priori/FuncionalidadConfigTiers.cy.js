@@ -40,7 +40,6 @@ describe('Tester de funcionalidad tiers de config', () => {
             cy.get('div[class*="text-[1.65rem]"][class*="font-bold"]').should('contain', tierSelect.FullName)
             cy.get('div[class*="line-clamp-2"][class*="text-[1.4rem]"][class*="font-medium"]').should('contain', tierSelect.TierDescription)
         })
-        cy.screenshot(`${ghostVersion}/modificando-tier-free`)
     })
 
     afterEach(() => {

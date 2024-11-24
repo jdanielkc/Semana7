@@ -26,8 +26,6 @@ describe('Tester de funcionalidad Member', () => {
         })
         cy.get('button[data-test-button="close-notification"]').click()
         cy.wait(500)
-        cy.screenshot(`${ghostVersion}/agregar-usuario-administrativo`)
-
     })
 
     it('E0008 Creando un nuevo miembro', () => {
@@ -50,8 +48,6 @@ describe('Tester de funcionalidad Member', () => {
             cy.wait(1500)
             //verificar creación
             cy.contains('h3', SelectedMember.full_name).should('exist')
-
-            cy.screenshot(`${ghostVersion}/nuevo-miembro`)
 
         })
     })
@@ -76,9 +72,6 @@ describe('Tester de funcionalidad Member', () => {
 
             //verificar mensaje error
             cy.contains('p', "Invalid Email.").should('exist')
-
-            cy.screenshot(`${ghostVersion}/nuevo-miembro-email-invalido`)
-
         })
     })
 
@@ -101,9 +94,6 @@ describe('Tester de funcionalidad Member', () => {
 
             //verificar mensaje error
             cy.contains('p', "Note is too long.").should('exist')
-
-            cy.screenshot(`${ghostVersion}/nuevo-miembro-nota-invalido`)
-
         })
     })
 
@@ -136,8 +126,6 @@ describe('Tester de funcionalidad Member', () => {
                 expect(filasDespues).to.equal(filasAntes - 1)
             })
         })
-
-        cy.screenshot(`${ghostVersion}/eliminar-miembro`)
     })
 
 
@@ -158,7 +146,6 @@ describe('Tester de funcionalidad Member', () => {
         // verificar que add-yourself existe
         cy.get('button[data-test-button="add-yourself"]').should('exist')
         cy.get('a[data-test-nav="members"]').click()
-        cy.screenshot(`${ghostVersion}/eliminar-miembro-administrador`)
 
     })
 

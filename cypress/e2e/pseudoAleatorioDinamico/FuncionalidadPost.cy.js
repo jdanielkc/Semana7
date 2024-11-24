@@ -13,7 +13,7 @@ describe('Tester de funcionalidad Post', () => {
         })
     })
 
-    it('E0018 Creando un nuevo post', () => {
+    it('E0068 Creando un nuevo post', () => {
         // Given: El usuario está autenticado y en la página de creación de posts
         cy.get('a[data-test-nav="posts"]').click()
         cy.wait(1500)
@@ -39,11 +39,10 @@ describe('Tester de funcionalidad Post', () => {
 
             // Then: El nuevo post aparece en la lista de posts
             cy.contains('h3', post.postTitle).should('exist')
-            cy.screenshot(`${ghostVersion}/nuevo-post`)
         })
     })
 
-    it('E0019 Eliminando un post', () => {
+    it('E0069 Eliminando un post', () => {
         // Given: El usuario está autenticado y en la página de listado de posts
         cy.get('a[data-test-nav="posts"]').click()
         cy.wait(1500)
@@ -75,11 +74,9 @@ describe('Tester de funcionalidad Post', () => {
                 expect(divsDespues).to.equal(divsAntes - 1)
             })
         })
-
-        cy.screenshot(`${ghostVersion}/eliminar-post`)
     })
 
-    it('E0020 Editando un post', () => {
+    it('E0070 Editando un post', () => {
         // Given: El usuario está autenticado y en la página de listado de posts
         cy.get('a[data-test-nav="posts"]').click()
         cy.wait(1500)
@@ -99,11 +96,10 @@ describe('Tester de funcionalidad Post', () => {
 
             // Then: El post editado aparece en la lista de posts
             cy.contains('h3', post.postTitle).should('exist')
-            cy.screenshot(`${ghostVersion}/editar-post`)
         })
     })
 
-    it('E0021 Creando un post con un titulo mayor a 255 caracteres', () => {
+    it('E0071 Creando un post con un titulo mayor a 255 caracteres', () => {
         // Given: El usuario está autenticado y en la página de creación de posts
         cy.get('a[data-test-nav="posts"]').click()
         cy.wait(1500)
@@ -126,7 +122,7 @@ describe('Tester de funcionalidad Post', () => {
 
             // Then: El mensaje de error se muestra en la pantalla
             cy.contains('div', "Validation failed: Title cannot be longer than 255 characters.").should('exist')
-            cy.screenshot(`${ghostVersion}/nuevo-post-titulo-invalido`)
+            
         })
     })
 })

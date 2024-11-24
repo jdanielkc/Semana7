@@ -1,4 +1,11 @@
 {
+  "name": "cypress",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "description": "",
   "dependencies": {
     "@faker-js/faker": "^9.2.0",
     "cypress": "^13.16.0",

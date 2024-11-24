@@ -38,7 +38,6 @@ describe('Tester de funcionalidad page', () => {
             //verificar creacion
             cy.contains('h3', pageData.title).should('exist')
         })
-        cy.screenshot(`${ghostVersion}/nueva-page`)
     })
 
     it('E0014 Creando Page con titulo y sin contenido', () => {
@@ -67,9 +66,6 @@ describe('Tester de funcionalidad page', () => {
             //verificar creacion
             cy.contains('h3', pageData.title).should('exist')
         })
-
-        cy.screenshot(`${ghostVersion}/nueva-page-sin-contenido`)
-
     })
 
     it('E0015 Eliminando una Page', () => {
@@ -105,9 +101,6 @@ describe('Tester de funcionalidad page', () => {
                 expect(divsDespues).to.equal(divsAntes - 1)
             })
         })
-
-        cy.screenshot(`${ghostVersion}/eliminar-page`)
-
     })
 
     it('E0016 Editando una Page', () => {
@@ -132,8 +125,7 @@ describe('Tester de funcionalidad page', () => {
             cy.url().should('include', '/pages')
 
             // Then: La página editada aparece en la lista de pages
-            cy.contains('h3', pageData.title).should('exist')
-            cy.screenshot(`${ghostVersion}/editar-page`)
+            cy.contains('h3', pageData.title).should('exist')    
         })
 
     })
@@ -160,7 +152,6 @@ describe('Tester de funcionalidad page', () => {
 
             // Then: El mensaje de error se muestra en la pantalla
             cy.contains('div', "Validation failed: Title cannot be longer than 255 characters.").should('exist')
-            cy.screenshot(`${ghostVersion}/nueva-page-titulo-invalido`)
         })
     })
 })

@@ -14,7 +14,7 @@ describe('Tester de funcionalidad newsletter de config', () => {
         })
     })
 
-    it('E0001 Creando un nuevo newsletter con una longitud máxima', () => {
+    it('E0026 Creando un nuevo newsletter con una longitud máxima', () => {
         // Given: El usuario navega a la configuración de newsletters
         cy.get('a[data-test-nav="settings"]').click()
         cy.wait(1500)
@@ -47,11 +47,11 @@ describe('Tester de funcionalidad newsletter de config', () => {
 
         // Then: El nuevo newsletter aparece en la lista de newsletters
         cy.get('table.w-full tbody tr').should('contain', newsletterName)
-        cy.screenshot(`${ghostVersion}/modificando-nombre-usuario`)
+        
 
     })
 
-    it('E0002 Editando un newsletter', () => {
+    it('E0027 Editando un newsletter', () => {
         // Given: El usuario navega a la configuración de newsletters
         cy.get('a[data-test-nav="settings"]').click()
         cy.wait(1500)
@@ -75,9 +75,9 @@ describe('Tester de funcionalidad newsletter de config', () => {
         cy.wait(1000)
 
         // Then: El nombre del newsletter se actualiza en la lista de newsletters
-        cy.get('table.w-full tbody tr').should('contain', newsletterRareName)
+        cy.get('table.w-full tbody tr').should('contain', newsletterName)
 
-        cy.screenshot(`${ghostVersion}/modificando-nombre-usuario`)
+        
 
     })
 })

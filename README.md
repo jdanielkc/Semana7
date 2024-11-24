@@ -31,25 +31,6 @@ Y se ingresan los siguientes datos:
 * **email:** jd.garciaa1@uniandes.edu.co
 * **password:** Pruebas123*
 
-## Ghost 4.5 (Puerto: 3368)
-
-Para ejecutar Ghost 4.5 haciendo uso de docker se pueden correr los siguientes comandos:
-
-```
-docker image pull ghost:4.5  
-docker run -d --name Ghost4.5 -e NODE_ENV=development -e url=http://localhost:3001 -p 3001:2368 ghost:4.5
-```
-
-Ahora se debe crear el usuario administrador, para ello se debe ingresar a la siguiente url una vez la imagen se haya levantado:
-
-```
-http://localhost:3001/ghost/#/setup
-```
-
-Y se ingresan los siguientes datos:
-* **email:** jd.garciaa1@uniandes.edu.co
-* **password:** Pruebas123*
-
 ## Instalación y ejecución
 
 Una vez hecho lo anterior ya se tiene el back con las dos aplicaciones bajo prueba listas para las pruebas, para ejecutar estas pruebas puede hacer:
@@ -60,13 +41,7 @@ Una vez hecho lo anterior ya se tiene el back con las dos aplicaciones bajo prue
 npm install
 ```
 
-2. Por facilidad, se configuro todo para generar las pruebas, comparar la imagenes y generar el reporte haciendo uso de un solo comando:
-
-```
-npm run test:comparar
-```
-
-Sin embargo, si desea ejecutar solo las pruebas mediante la interfaz de cypress:
+Si desea ejecutar solo las pruebas mediante la interfaz de cypress:
 
 ```
 npx cypress open
@@ -78,61 +53,113 @@ O si se desea ejecutar sin la interfaz, se ejecuta:
 npx cypress run --headless
 ```
 
-Para generar el reporte y la comparacion de manera manual, se puede ejecutar en la raiz del proyecto:
-
-```
-node reporte.cjs
-```
 
 # Funcionalidades Ghost 5.96.0:
+## Parte 1:
 * Funcionalidad ConfigNewsletter
-    - E0001 Creando un nuevo newsletter
-    - E0002 Editando un newsletter
+    - A-priori: FuncionalidadConfigNewsletter - E0001 Creando un nuevo newsletter
+    - A-priori: FuncionalidadConfigNewsletter - E0002 Editando un newsletter
 * Funcionalidad ConfigStaff
-    - E0003 Modificación del nombre de usuario
+    - A-priori: FuncionalidadConfigStaff - E0003 Modificación del nombre de usuario
 * Funcionalidad ConfigTiers
-    - E0004 Modificación tier free
+    - A-priori: FuncionalidadConfigTiers - E0004 Modificación tier free
 * Funcionalidad Login
-    - E0005 Verificando Inicio de sesión exitoso
-    - E0006 Verificando inicio de sesión fallido
+    - A-priori: FuncionalidadLogin - E0005 Verificando Inicio de sesión exitoso
+    - A-priori: FuncionalidadLogin - E0006 Verificando inicio de sesión fallido
 * Funcionalidad Member
-    - E0007 Añadiendo usuario administrativo como miembro
-    - E0008 Creando un nuevo miembro
-    - E0009 Eliminando un miembro
-    - E0010 Eliminando miembro administrador
+    - A-priori: FuncionalidadMember - E0007 Añadiendo usuario administrativo como miembro
+    - A-priori: FuncionalidadMember - E0008 Creando un nuevo miembro
+    - A-priori: FuncionalidadMember - E0009 Creando un nuevo miembro con email no valido
+    - A-priori: FuncionalidadMember - E0010 Creando un nuevo miembro con campo nota mayor a 500 caracteres
+    - A-priori: FuncionalidadMember - E0011 Eliminando un miembro
+    - A-priori: FuncionalidadMember - E0012 Eliminando miembro administrador
 * Funcionalidad Page
-    - E0011 Creando Page con titulo y contenido
-    - E0012 Creando Page con titulo y sin contenido
-    - E0013 Eliminando una Page
-    - E0014 Editando una Page
+    - A-priori: FuncionalidadPage - E0013 Creando Page con titulo y contenido
+    - A-priori: FuncionalidadPage - E0014 Creando Page con titulo y sin contenido
+    - A-priori: FuncionalidadPage - E0015 Eliminando una Page
+    - A-priori: FuncionalidadPage - E0016 Editando una Page
+    - A-priori: FuncionalidadPage - E0017 Creando un page con un titulo mayor a 255 caracteres
 * Funcionalidad Post
-    - E0015 Creando un nuevo post
-    - E0016 Eliminando un post
-    - E0017 Editando un post
+    - A-priori: FuncionalidadPost - E0018 Creando un nuevo post
+    - A-priori: FuncionalidadPost - E0019 Eliminando un post
+    - A-priori: FuncionalidadPost - E0020 Editando un post
+    - A-priori: FuncionalidadPost - E0021 Creando un post con un titulo mayor a 255 caracteres
 * Funcionalidad Tags
-    - E0018 Creando un nuevo Tag
-    - E0019 Eliminando un Tag
-    - E0020 Editando un Tag
-# Funcionalidades Ghost 4.5:
+    - A-priori: FuncionalidadTags - E0022 Creando un nuevo Tag
+    - A-priori: FuncionalidadTags - E0023 Eliminando un Tag
+    - A-priori: FuncionalidadTags - E0024 Editando un Tag
+    - A-priori: FuncionalidadTags - E0025 Creando un tag con una descripción mayor a 500 caracteres
+
+## Parte 2
+
+* Funcionalidad ConfigNewsletter
+    - Aleatorio: FuncionalidadConfigNewsletter - E0001 Creando un nuevo newsletter
+    - Aleatorio: FuncionalidadConfigNewsletter - E0002 Editando un newsletter
 * Funcionalidad ConfigStaff
-    - E0001 Modificación del nombre de usuario
+    - Aleatorio: FuncionalidadConfigStaff - E0003 Modificación del nombre de usuario
 * Funcionalidad ConfigTiers
-    - E0002 Modificación tier free
+    - Aleatorio: FuncionalidadConfigTiers - E0004 Modificación tier free
+* Funcionalidad Login
+    - Aleatorio: FuncionalidadLogin - E0005 Verificando Inicio de sesión exitoso
+    - Aleatorio: FuncionalidadLogin - E0006 Verificando inicio de sesión fallido
 * Funcionalidad Member
-    - E0003 Añadiendo usuario administrativo como miembro
-    - E0004 Creando un nuevo miembro
-    - E0005 Eliminando un miembro
-    - E0006 Eliminando miembro administrador
+    - Aleatorio: FuncionalidadMember - E0007 Añadiendo usuario administrativo como miembro
+    - Aleatorio: FuncionalidadMember - E0008 Creando un nuevo miembro
+    - Aleatorio: FuncionalidadMember - E0009 Creando un nuevo miembro con email no valido
+    - Aleatorio: FuncionalidadMember - E0010 Creando un nuevo miembro con campo nota mayor a 500 caracteres
+    - Aleatorio: FuncionalidadMember - E0011 Eliminando un miembro
+    - Aleatorio: FuncionalidadMember - E0012 Eliminando miembro administrador
 * Funcionalidad Page
-    - E0007 Creando Page con titulo y contenido
-    - E0008 Creando Page con titulo y sin contenido
+    - Aleatorio: FuncionalidadPage - E0013 Creando Page con titulo y contenido
+    - Aleatorio: FuncionalidadPage - E0014 Creando Page con titulo y sin contenido
+    - Aleatorio: FuncionalidadPage - E0015 Eliminando una Page
+    - Aleatorio: FuncionalidadPage - E0016 Editando una Page
+    - Aleatorio: FuncionalidadPage - E0017 Creando un page con un titulo mayor a 255 caracteres
 * Funcionalidad Post
-    - E0009 Creando un nuevo post
-    - E0010 Eliminando un post
+    - Aleatorio: FuncionalidadPost - E0018 Creando un nuevo post
+    - Aleatorio: FuncionalidadPost - E0019 Eliminando un post
+    - Aleatorio: FuncionalidadPost - E0020 Editando un post
+    - Aleatorio: FuncionalidadPost - E0021 Creando un post con un titulo mayor a 255 caracteres
+* Funcionalidad Tags
+    - Aleatorio: FuncionalidadTags - E0022 Creando un nuevo Tag
+    - Aleatorio: FuncionalidadTags - E0023 Eliminando un Tag
+    - Aleatorio: FuncionalidadTags - E0024 Editando un Tag
+    - Aleatorio: FuncionalidadTags - E0025 Creando un tag con una descripción mayor a 500 caracteres
+
+## Parte 3:
+* Funcionalidad ConfigNewsletter
+    - pseudoaleatorio dinámico: FuncionalidadConfigNewsletter - E0001 Creando un nuevo newsletter
+    - pseudoaleatorio dinámico: FuncionalidadConfigNewsletter - E0002 Editando un newsletter
+* Funcionalidad ConfigStaff
+    - pseudoaleatorio dinámico: FuncionalidadConfigStaff - E0003 Modificación del nombre de usuario
+* Funcionalidad ConfigTiers
+    - pseudoaleatorio dinámico: FuncionalidadConfigTiers - E0004 Modificación tier free
+* Funcionalidad Login
+    - pseudoaleatorio dinámico: FuncionalidadLogin - E0005 Verificando Inicio de sesión exitoso
+    - pseudoaleatorio dinámico: FuncionalidadLogin - E0006 Verificando inicio de sesión fallido
+* Funcionalidad Member
+    - pseudoaleatorio dinámico: FuncionalidadMember - E0007 Añadiendo usuario administrativo como miembro
+    - pseudoaleatorio dinámico: FuncionalidadMember - E0008 Creando un nuevo miembro
+    - pseudoaleatorio dinámico: FuncionalidadMember - E0009 Creando un nuevo miembro con email no valido
+    - pseudoaleatorio dinámico: FuncionalidadMember - E0010 Creando un nuevo miembro con campo nota mayor a 500 caracteres
+    - pseudoaleatorio dinámico: FuncionalidadMember - E0011 Eliminando un miembro
+    - pseudoaleatorio dinámico: FuncionalidadMember - E0012 Eliminando miembro administrador
+* Funcionalidad Page
+    - pseudoaleatorio dinámico: FuncionalidadPage - E0013 Creando Page con titulo y contenido
+    - pseudoaleatorio dinámico: FuncionalidadPage - E0014 Creando Page con titulo y sin contenido
+    - pseudoaleatorio dinámico: FuncionalidadPage - E0015 Eliminando una Page
+    - pseudoaleatorio dinámico: FuncionalidadPage - E0016 Editando una Page
+    - pseudoaleatorio dinámico: FuncionalidadPage - E0017 Creando un page con un titulo mayor a 255 caracteres
+* Funcionalidad Post
+    - pseudoaleatorio dinámico: FuncionalidadPost - E0018 Creando un nuevo post
+    - pseudoaleatorio dinámico: FuncionalidadPost - E0019 Eliminando un post
+    - pseudoaleatorio dinámico: FuncionalidadPost - E0020 Editando un post
+    - pseudoaleatorio dinámico: FuncionalidadPost - E0021 Creando un post con un titulo mayor a 255 caracteres
+* Funcionalidad Tags
+    - pseudoaleatorio dinámico: FuncionalidadTags - E0022 Creando un nuevo Tag
+    - pseudoaleatorio dinámico: FuncionalidadTags - E0023 Eliminando un Tag
+    - pseudoaleatorio dinámico: FuncionalidadTags - E0024 Editando un Tag
+    - pseudoaleatorio dinámico: FuncionalidadTags - E0025 Creando un tag con una descripción mayor a 500 caracteres
 # Pruebas de funcionamiento
 
 ![Pruebas de funcionamiento](./pruebas-funcionamiento.png)
-
-# Comparación de imágenes haciendo uso de pixelmatch
-
-La generación del reporte y la comparación de imágenes se realiza automáticamente ejecutando los comandos descritos arriba. Y pueden ser consultados en la carpeta **reporte**.

@@ -49,7 +49,6 @@ describe('Tester de funcionalidad newsletter de config', () => {
 
             // Then: El nuevo newsletter aparece en la lista de newsletters
             cy.get('table.w-full tbody tr').should('contain', newsletterName)
-            cy.screenshot(`${ghostVersion}/modificando-nombre-usuario`)
         })
     })
 
@@ -81,8 +80,6 @@ describe('Tester de funcionalidad newsletter de config', () => {
 
             // Then: El nombre del newsletter se actualiza en la lista de newsletters
             cy.get('table.w-full tbody tr').should('contain', newsletterRareName)
-
-            cy.screenshot(`${ghostVersion}/modificando-nombre-usuario`)
         })
     })
 })

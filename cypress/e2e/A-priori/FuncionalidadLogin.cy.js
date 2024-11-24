@@ -1,6 +1,6 @@
 const ghostVersion = Cypress.env('GHOST_VERSION');
 
-describe('Tester de funcionalidad page', () => {
+describe('Tester de funcionalidad login', () => {
     beforeEach(() => {
         cy.fixture('userLogin.json').then((user) => {
             cy.visit(user.loginPage)
@@ -15,8 +15,6 @@ describe('Tester de funcionalidad page', () => {
             cy.url().should('include', '/dashboard')
         })
 
-        cy.screenshot(`${ghostVersion}/inicio-sesion-exitoso`)
-
     })
 
     it('E0006 Verificando inicio de sesión fallido', () => {
@@ -28,7 +26,5 @@ describe('Tester de funcionalidad page', () => {
             cy.get('button[data-test-button="sign-in"]').click()
             cy.get('p[data-test-flow-notification]').should('exist')
         })
-
-        cy.screenshot(`${ghostVersion}/inicio-sesion-fallido`)
     })
 })

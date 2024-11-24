@@ -13,7 +13,7 @@ describe('Tester de funcionalidad page', () => {
         })
     })
 
-    it('E0013 Creando Page con titulo y contenido', () => {
+    it('E0063 Creando Page con titulo y contenido', () => {
         // Given: El usuario está autenticado y en la página de creación de pages
         cy.get('a[data-test-nav="pages"]').click()
         cy.wait(1500)
@@ -38,11 +38,11 @@ describe('Tester de funcionalidad page', () => {
 
             // Then: Verificar creación
             cy.contains('h3', page.pageTitle).should('exist')
-            cy.screenshot(`${ghostVersion}/nueva-page`)
+            
         })
     })
 
-    it('E0014 Creando Page con titulo y sin contenido', () => {
+    it('E0064 Creando Page con titulo y sin contenido', () => {
         // Given: El usuario está autenticado y en la página de creación de pages
         cy.get('a[data-test-nav="pages"]').click()
         cy.wait(1500)
@@ -68,11 +68,11 @@ describe('Tester de funcionalidad page', () => {
 
             // Then: Verificar creación
             cy.contains('h3', page.pageTitle).should('exist')
-            cy.screenshot(`${ghostVersion}/nueva-page-sin-contenido`)
+            
         })
     })
 
-    it('E0015 Eliminando una Page', () => {
+    it('E0065 Eliminando una Page', () => {
         // Given: El usuario está autenticado y en la página de listado de pages
         cy.get('a[data-test-nav="pages"]').click()
         cy.wait(500)
@@ -105,10 +105,10 @@ describe('Tester de funcionalidad page', () => {
             })
         })
 
-        cy.screenshot(`${ghostVersion}/eliminar-page`)
+       
     })
 
-    it('E0016 Editando una Page', () => {
+    it('E0066 Editando una Page', () => {
         // Given: El usuario está autenticado y en la página de listado de pages
         cy.get('a[data-test-nav="pages"]').click()
         cy.wait(500)
@@ -130,11 +130,11 @@ describe('Tester de funcionalidad page', () => {
 
             // Then: La página editada aparece en la lista de pages
             cy.contains('h3', page.pageTitle).should('exist')
-            cy.screenshot(`${ghostVersion}/editar-page`)
+            
         })
     })
 
-    it('E0017 Creando un page con un titulo mayor a 255 caracteres', () => {
+    it('E0067 Creando un page con un titulo mayor a 255 caracteres', () => {
         // Given: El usuario está autenticado y en la página de creación de pages
         cy.get('a[data-test-nav="pages"]').click()
         cy.wait(1500)
@@ -157,7 +157,7 @@ describe('Tester de funcionalidad page', () => {
 
             // Then: El mensaje de error se muestra en la pantalla
             cy.contains('div', "Validation failed: Title cannot be longer than 255 characters.").should('exist')
-            cy.screenshot(`${ghostVersion}/nueva-page-titulo-invalido`)
+            
         })
     })
 })

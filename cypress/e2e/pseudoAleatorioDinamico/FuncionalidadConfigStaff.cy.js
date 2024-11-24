@@ -13,7 +13,7 @@ describe('Tester de funcionalidad staff de config', () => {
         })
     })
 
-    it('E0003 Modificando el nombre de usuario', () => {
+    it('E0053 Modificando el nombre de usuario', () => {
         // Given: El usuario está autenticado y en la página de configuración de staff
         cy.get('a[data-test-nav="settings"]').click()
         cy.wait(1500)
@@ -42,7 +42,7 @@ describe('Tester de funcionalidad staff de config', () => {
             cy.url().should('include', '/settings/staff')
             cy.get('div.flex.flex-col > span').should('contain', `${newFullName} — Owner`)
 
-            cy.screenshot(`${ghostVersion}/modificando-nombre-usuario`)
+            
         })
     })
 

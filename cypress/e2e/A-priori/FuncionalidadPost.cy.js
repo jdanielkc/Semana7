@@ -39,7 +39,6 @@ describe('Tester de funcionalidad Post', () => {
 
             // Then: El nuevo post aparece en la lista de posts
             cy.contains('h3', postData.title).should('exist')
-            cy.screenshot(`${ghostVersion}/nuevo-post`)
         })
     })
 
@@ -75,8 +74,6 @@ describe('Tester de funcionalidad Post', () => {
                 expect(divsDespues).to.equal(divsAntes - 1)
             })
         })
-
-        cy.screenshot(`${ghostVersion}/eliminar-post`)
     })
 
     it('E0020 Editando un post', () => {
@@ -100,8 +97,6 @@ describe('Tester de funcionalidad Post', () => {
 
             // Then: El post editado aparece en la lista de posts
             cy.contains('h3', postData.title).should('exist')
-
-            cy.screenshot(`${ghostVersion}/editar-post`)
         })
     })
 
@@ -127,7 +122,7 @@ describe('Tester de funcionalidad Post', () => {
 
             // Then: El nuevo post aparece en la lista de posts
             cy.contains('div', "Validation failed: Title cannot be longer than 255 characters.").should('exist')
-            cy.screenshot(`${ghostVersion}/nuevo-post-titulo-invalido`)
+            
         })
     })
 
