@@ -132,3 +132,6 @@ dist
 
 /cypress/videos
 /cypress/screenshots
+
+/kraken/node_modules
+/kraken/reports
