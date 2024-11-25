@@ -39,8 +39,6 @@ describe('Tester de funcionalidad staff de config', () => {
         cy.wait(1500)
         cy.url().should('include', '/settings/staff')
         cy.get('div.flex.flex-col > span').should('contain', `${newFullName} — Owner`)
-
-        cy.screenshot(`${ghostVersion}/modificando-nombre-usuario`)
     })
 
     afterEach(() => {
