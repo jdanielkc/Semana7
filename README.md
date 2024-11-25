@@ -54,9 +54,9 @@ npx cypress run --headless
 ```
 ## Estrategias de generación de datos
 
-Las estratégias de generación de datos implementadas en el proyecto son explicadas en la wiki del mismo, para su consulta, seguir el siguiente linl [Wiki: Generación de datos](https://github.com/jdanielkc/Semana7/wiki/Estrategias-Datapool)
+Las estratégicas de generación de datos implementadas en el proyecto son explicadas en la wiki del mismo, para su consulta, seguir el siguiente link [Wiki: Generación de datos](https://github.com/jdanielkc/Semana7/wiki/Estrategias-Datapool)
 
-## Funcionalidades Ghost 5.96.0:
+## Funcionalidades Cypress Ghost 5.96.0:
 #### Parte 1:
 * Funcionalidad ConfigNewsletter
     - A-priori: FuncionalidadConfigNewsletter - E0001 Creando un nuevo newsletter
@@ -130,38 +130,38 @@ Las estratégias de generación de datos implementadas en el proyecto son explic
 
 #### Parte 3:
 * Funcionalidad ConfigNewsletter
-    - pseudoaleatorio dinámico: FuncionalidadConfigNewsletter - E0001 Creando un nuevo newsletter
-    - pseudoaleatorio dinámico: FuncionalidadConfigNewsletter - E0002 Editando un newsletter
+    - pseudo-aleatorio dinámico: FuncionalidadConfigNewsletter - E0001 Creando un nuevo newsletter
+    - pseudo-aleatorio dinámico: FuncionalidadConfigNewsletter - E0002 Editando un newsletter
 * Funcionalidad ConfigStaff
-    - pseudoaleatorio dinámico: FuncionalidadConfigStaff - E0003 Modificación del nombre de usuario
+    - pseudo-aleatorio dinámico: FuncionalidadConfigStaff - E0003 Modificación del nombre de usuario
 * Funcionalidad ConfigTiers
-    - pseudoaleatorio dinámico: FuncionalidadConfigTiers - E0004 Modificación tier free
+    - pseudo-aleatorio dinámico: FuncionalidadConfigTiers - E0004 Modificación tier free
 * Funcionalidad Login
-    - pseudoaleatorio dinámico: FuncionalidadLogin - E0005 Verificando Inicio de sesión exitoso
-    - pseudoaleatorio dinámico: FuncionalidadLogin - E0006 Verificando inicio de sesión fallido
+    - pseudo-aleatorio dinámico: FuncionalidadLogin - E0005 Verificando Inicio de sesión exitoso
+    - pseudo-aleatorio dinámico: FuncionalidadLogin - E0006 Verificando inicio de sesión fallido
 * Funcionalidad Member
-    - pseudoaleatorio dinámico: FuncionalidadMember - E0007 Añadiendo usuario administrativo como miembro
-    - pseudoaleatorio dinámico: FuncionalidadMember - E0008 Creando un nuevo miembro
-    - pseudoaleatorio dinámico: FuncionalidadMember - E0009 Creando un nuevo miembro con email no valido
-    - pseudoaleatorio dinámico: FuncionalidadMember - E0010 Creando un nuevo miembro con campo nota mayor a 500 caracteres
-    - pseudoaleatorio dinámico: FuncionalidadMember - E0011 Eliminando un miembro
-    - pseudoaleatorio dinámico: FuncionalidadMember - E0012 Eliminando miembro administrador
+    - pseudo-aleatorio dinámico: FuncionalidadMember - E0007 Añadiendo usuario administrativo como miembro
+    - pseudo-aleatorio dinámico: FuncionalidadMember - E0008 Creando un nuevo miembro
+    - pseudo-aleatorio dinámico: FuncionalidadMember - E0009 Creando un nuevo miembro con email no valido
+    - pseudo-aleatorio dinámico: FuncionalidadMember - E0010 Creando un nuevo miembro con campo nota mayor a 500 caracteres
+    - pseudo-aleatorio dinámico: FuncionalidadMember - E0011 Eliminando un miembro
+    - pseudo-aleatorio dinámico: FuncionalidadMember - E0012 Eliminando miembro administrador
 * Funcionalidad Page
-    - pseudoaleatorio dinámico: FuncionalidadPage - E0013 Creando Page con titulo y contenido
-    - pseudoaleatorio dinámico: FuncionalidadPage - E0014 Creando Page con titulo y sin contenido
-    - pseudoaleatorio dinámico: FuncionalidadPage - E0015 Eliminando una Page
-    - pseudoaleatorio dinámico: FuncionalidadPage - E0016 Editando una Page
-    - pseudoaleatorio dinámico: FuncionalidadPage - E0017 Creando un page con un titulo mayor a 255 caracteres
+    - pseudo-aleatorio dinámico: FuncionalidadPage - E0013 Creando Page con titulo y contenido
+    - pseudo-aleatorio dinámico: FuncionalidadPage - E0014 Creando Page con titulo y sin contenido
+    - pseudo-aleatorio dinámico: FuncionalidadPage - E0015 Eliminando una Page
+    - pseudo-aleatorio dinámico: FuncionalidadPage - E0016 Editando una Page
+    - pseudo-aleatorio dinámico: FuncionalidadPage - E0017 Creando un page con un titulo mayor a 255 caracteres
 * Funcionalidad Post
-    - pseudoaleatorio dinámico: FuncionalidadPost - E0018 Creando un nuevo post
-    - pseudoaleatorio dinámico: FuncionalidadPost - E0019 Eliminando un post
-    - pseudoaleatorio dinámico: FuncionalidadPost - E0020 Editando un post
-    - pseudoaleatorio dinámico: FuncionalidadPost - E0021 Creando un post con un titulo mayor a 255 caracteres
+    - pseudo-aleatorio dinámico: FuncionalidadPost - E0018 Creando un nuevo post
+    - pseudo-aleatorio dinámico: FuncionalidadPost - E0019 Eliminando un post
+    - pseudo-aleatorio dinámico: FuncionalidadPost - E0020 Editando un post
+    - pseudo-aleatorio dinámico: FuncionalidadPost - E0021 Creando un post con un titulo mayor a 255 caracteres
 * Funcionalidad Tags
-    - pseudoaleatorio dinámico: FuncionalidadTags - E0022 Creando un nuevo Tag
-    - pseudoaleatorio dinámico: FuncionalidadTags - E0023 Eliminando un Tag
-    - pseudoaleatorio dinámico: FuncionalidadTags - E0024 Editando un Tag
-    - pseudoaleatorio dinámico: FuncionalidadTags - E0025 Creando un tag con una descripción mayor a 500 caracteres
+    - pseudo-aleatorio dinámico: FuncionalidadTags - E0022 Creando un nuevo Tag
+    - pseudo-aleatorio dinámico: FuncionalidadTags - E0023 Eliminando un Tag
+    - pseudo-aleatorio dinámico: FuncionalidadTags - E0024 Editando un Tag
+    - pseudo-aleatorio dinámico: FuncionalidadTags - E0025 Creando un tag con una descripción mayor a 500 caracteres
 ## Pruebas de funcionamiento
 
 ![Pruebas de funcionamiento](./pruebas-funcionamiento.png)
@@ -178,7 +178,7 @@ Las estratégias de generación de datos implementadas en el proyecto son explic
 * SO: _Windows 11_
 * Node.js versión: _v20.18.0_
 * npm versión: _10.9.0_
-## Levantamiento de las imagenes docker de Ghost
+## Levantamiento de las imágenes docker de Ghost
 
 El levantamiento de la imagen docker se hace de forma similar a como se realizó en los pasos anteriores con cypress:
 
@@ -197,7 +197,7 @@ Y se ingresan los siguientes datos:
 * **email:** jd.garciaa1@uniandes.edu.co
 * **password:** Pruebas123*
 
-**NOTA:** Si ya se levantaron las imagenes en pasos anteriores, no es necesario ejecutar nuevamente los comandos docker.
+**NOTA:** Si ya se levantaron las imágenes en pasos anteriores, no es necesario ejecutar nuevamente los comandos docker.
 
 #### Instalación y ejecución
 
@@ -213,8 +213,66 @@ cd kraken
 npm install
 ```
 
-Para realizar la ejecución de los `.features` se debe mover el `.feature` que se desea ejecutar desde la carpeta `all_features` hacia la raiz de la carpeta `feature`. Por ejemplo, para ejecutar el escenario con el tag `@over_max_title` del feature `prueba0.feature` se debe mover este archivo y posteriormente ejecutar el siguiente comando
+Para realizar la ejecución de los `.features` se debe mover el `.feature` que se desea ejecutar desde la carpeta `all_features` hacia la raíz de la carpeta `feature`. Por ejemplo, para ejecutar el escenario con el tag `@over_max_title` del feature `prueba0.feature` se debe mover este archivo y posteriormente ejecutar el siguiente comando
 
 ```
 npx cucumber-js --tags "@over_max_title"
 ```
+
+## Funcionalidades Kraken Ghost 5.96.0:
+
+De las funcionalidades implementadas en entregas anteriores, se impletaron los pools de datos en los siguientes escenarios y funcionalidades:
+
+* Funcionalidad Page
+    - A-priori: `prueba1.feature`
+* Funcionalidad Post
+    - A-priori: `prueba3.feature`
+* Funcionalidad Members
+    - A-priori: `prueba5.feature`
+* Funcionalidad Login
+    - A-priori: `prueba0.feature`
+* Funcionalidad Tag
+    - Aleatorio: `prueba7.feature`
+    - Aleatorio: `prueba9.feature`
+
+El detalle de los escenarios mencionados y el tag necesario para la ejecución están en cada archivo:
+
+* A-priori:
+
+1. prueba1.feature Con mi usuario y contraseña de ghost quiero crear un sitio con el titulo vacío tag: @empty-data
+
+2. prueba3.feature Con mi usuario de ghost quiero crear un post sin datos tag: @empty-data
+
+3. prueba5.feature Con mi usuario de ghost quiero crear un nuevo miembro sin datos a priori tag: @empty_data
+
+4. prueba5.feature Con mi usuario de ghost quiero crear un nuevo miembro con email sin arroba a priori tag: @email_whitout_arroba
+
+5. prueba5.feature Con mi usuario de ghost quiero crear un nuevo miembro con el email sin punto com a priori tag: @email_whitout_dotcom
+
+* Faker:
+
+6. prueba0.feature Login fallido con credenciales aleatorias tag: @faker
+
+7. prueba1.feature Con mi usuario y contraseña de ghost quiero crear un sitio exitosamente con datos aleatorios tag: @success
+
+8. prueba1.feature Con mi usuario y contraseña de ghost quiero crear un sitio con un titulo muy largo tag: @over_max_title
+
+9. prueba3.feature Con mi usuario de ghost quiero crear un post con datos aleatorios tag: @success
+
+10. prueba3.feature Con mi usuario de ghost quiero crear un post con datos aleatorios que superen lo permitido tag: @over_max_title
+
+11. prueba5.feature Con mi usuario de ghost quiero crear un nuevo miembro con datos aleatorios tag: @success
+
+12. prueba5.feature Con mi usuario de ghost quiero crear un nuevo miembro con datos aleatorios y que la nota supere lo permitido tag: @over_max_note
+
+13. prueba7.feature Crear tag exitosamente con datos aleatorios tag: @success
+
+14. prueba7.feature Crear tag error por mas de 191 caracteres en el nombre tag: @over_max_name
+
+15. prueba7.feature Crear tag error con descripción de mas de 500 caracteres tag: @over_max_description
+
+16. prueba9.feature Editar el titulo y la descripción del sitio exitosamente con datos aleatorios tag: @success
+
+
+# NOTA
+Ya que el equipo 24 está conformado solo por 2 integrantes, se cumplió con el requisito de entrega de 60 escenarios en total haciendo uso de los pool de datos a priori, pseudo-aleatorio y aleatorio.
