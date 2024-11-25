@@ -52,7 +52,9 @@ O si se desea ejecutar sin la interfaz, se ejecuta:
 ```
 npx cypress run --headless
 ```
+# Estrategias de generación de datos
 
+Las estratégias de generación de datos implementadas en el proyecto son explicadas en la wiki del mismo, para su consulta, seguir el siguiente linl [Wiki: Generación de datos](https://github.com/jdanielkc/Semana7/wiki/Estrategias-Datapool)
 
 # Funcionalidades Ghost 5.96.0:
 ## Parte 1:
